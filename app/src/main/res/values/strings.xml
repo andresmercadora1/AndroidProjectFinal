@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Inventario</string>
+    <string name="nombre">Nombre</string>
+    <string name="identificacion">N° Identificación</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="btnRegister">Registrarse</string>
+    <string name="btnGuardarProd">Save Product</string>
+    <string name="name">Enter name</string>
+    <string name="description">Enter description</string>
+    <string name="reference">Enter reference</string>
+    <string name="stock">Enter stock</string>
+    <string name="price">Enter price</string>
+    <string name="brand">Enter brand</string>
+    <string name="category">Enter category</string>
+</resources>
