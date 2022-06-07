@@ -47,49 +47,58 @@
                 android:id="@+id/tvId"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp" />
+                android:layout_marginTop="20dp"
+                android:text="Id:" />
 
             <TextView
                 android:id="@+id/tvIName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp" />
+                android:layout_marginTop="20dp"
+                android:text="Name:" />
 
             <TextView
                 android:id="@+id/tvIDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp" />
+                android:layout_marginTop="20dp"
+                android:text="Description:" />
 
             <TextView
                 android:id="@+id/tvIReference"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp" />
+                android:layout_marginTop="20dp"
+                android:text="Reference:" />
 
             <TextView
                 android:id="@+id/tvIStock"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp" />
+                android:layout_marginTop="20dp"
+                android:text="Stock:" />
 
             <TextView
                 android:id="@+id/tvIPrice"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp" />
+                android:layout_marginTop="20dp"
+                android:text="Price:" />
 
             <TextView
                 android:id="@+id/tvIBrand"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp" />
+                android:layout_marginTop="20dp"
+                android:text="Brand:" />
 
             <TextView
                 android:id="@+id/tvICategory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp" />
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="Category:" />
         </LinearLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
