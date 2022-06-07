@@ -102,7 +102,22 @@
                     android:id="@+id/btnGuardarProd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/btnGuardarProd" />
+                    android:text="@string/btnGuardarProd"
+                    app:cornerRadius="20dp" />
+
+                <Button
+                    android:id="@+id/btnSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Search Product"
+                    app:cornerRadius="20dp" />
+
+                <Button
+                    android:id="@+id/btnLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Logout"
+                    app:cornerRadius="20dp" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

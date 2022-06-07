@@ -31,19 +31,26 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
     public void registerUser(View view) {
 
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        if(registerBinding.etNombre.getText().toString().isEmpty()
+            && registerBinding.etEmail.getText().toString().isEmpty()
+            && registerBinding.etPassword.getText().toString().isEmpty()
+            && registerBinding.etNumeroIdentificacion.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Debe rellenar los campos", Toast.LENGTH_SHORT).show();
+        } else {
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
 
-        ContentValues userData = new ContentValues();
-        userData.put("name", registerBinding.etNombre.getText().toString());
-        userData.put("email", registerBinding.etEmail.getText().toString());
-        userData.put("password", registerBinding.etPassword.getText().toString());
-        userData.put("identification", registerBinding.etNumeroIdentificacion.getText().toString());
+            ContentValues userData = new ContentValues();
+            userData.put("name", registerBinding.etNombre.getText().toString());
+            userData.put("email", registerBinding.etEmail.getText().toString());
+            userData.put("password", registerBinding.etPassword.getText().toString());
+            userData.put("identification", registerBinding.etNumeroIdentificacion.getText().toString());
 
-        long newUser = db.insert("users", null, userData);
-        Toast.makeText(this, "" + newUser, Toast.LENGTH_SHORT).show();
+            long newUser = db.insert("users", null, userData);
+            Toast.makeText(this, "" + newUser, Toast.LENGTH_SHORT).show();
 
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+        }
     }
 
     @Override

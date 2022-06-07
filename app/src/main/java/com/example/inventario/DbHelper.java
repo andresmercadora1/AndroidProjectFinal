@@ -41,7 +41,10 @@ public class DbHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         String SQL_DELETE_USER = "DROP TABLE IF EXISTS users";
+        String SQL_DELETE_PRODUCT = "DROP TABLE IF EXISTS products";
+
         db.execSQL(SQL_DELETE_USER);
+        db.execSQL(SQL_DELETE_PRODUCT);
         onCreate(db);
     }
 }

@@ -31,19 +31,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     public void checkLogin(View view) {
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
-        String emailToFind = mainBinding.edEmail.getText().toString();
-        String passwordToFind = mainBinding.edPassword.getText().toString();
-        Cursor cursor = db.rawQuery(
-            "SELECT * FROM users WHERE email = '" + emailToFind + "' AND password = '" + passwordToFind + "'", null
-        );
-        cursor.moveToNext();
-        int valid = cursor.getCount();
-        if(valid>0) {
-            Intent intent = new Intent(this, ProductActivity.class);
-            startActivity(intent);
+        if(mainBinding.edPassword.getText().toString().isEmpty() && mainBinding.edEmail.getText().toString().isEmpty()) {
+            Toast.makeText(this, "Debe rellenar los campos", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(this, "La información ingresada es incorrecta", Toast.LENGTH_SHORT).show();
+            SQLiteDatabase db = dbHelper.getWritableDatabase();
+            String emailToFind = mainBinding.edEmail.getText().toString();
+            String passwordToFind = mainBinding.edPassword.getText().toString();
+            Cursor cursor = db.rawQuery(
+                    "SELECT * FROM users WHERE email = '" + emailToFind + "' AND password = '" + passwordToFind + "'", null
+            );
+            cursor.moveToNext();
+            int valid = cursor.getCount();
+            if(valid>0) {
+                Intent intent = new Intent(this, ProductActivity.class);
+                startActivity(intent);
+            } else {
+                Toast.makeText(this, "La información ingresada es incorrecta", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
